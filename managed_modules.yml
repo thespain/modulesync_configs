@@ -1,0 +1,9 @@
+---
+- genebean-firewalld2iptables
+- genebean-networker
+- genebean-nginx_proxy
+- genebean-nxlog
+- genebean-puppetmaster_webhook
+- genebean-winbind
+- genebean-zabbixagent
+

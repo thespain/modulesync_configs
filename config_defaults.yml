@@ -1,0 +1,15 @@
+---
+.gitignore:
+.project:
+  delete: true
+.puppet-lint.rc:
+.rspec:
+.travis.yml:
+Gemfile:
+LICENSE:
+  year: '2015'
+Rakefile:
+spec/spec_helper.rb:
+spec/spec.opts:
+  delete: true
+Vagrantfile:
