@@ -18,4 +18,10 @@ notifications:
   email:
     on_failure: change
     on_success: never
-
+<% if ! @configs['slack_rooms'].nil? -%>
+  slack:
+    rooms:
+<% @configs['slack_rooms'].each do |room| -%>
+      secure: <%= room %>
+<% end -%>
+<% end -%>

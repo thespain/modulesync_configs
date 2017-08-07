@@ -6,6 +6,14 @@ This repository contains default configuration for
 I maintain.
 
 
+Command Quick Reference
+-----------------------
+
+```
+msync update -m "Commit message" [ --changelog ][ --amend --force ] [ --bump ]
+```
+
+
 Configuring ModuleSync
 ----------------------
 
