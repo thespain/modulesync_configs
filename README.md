@@ -13,6 +13,32 @@ Command Quick Reference
 msync update -m "Commit message" [ --changelog ][ --amend --force ] [ --bump ]
 ```
 
+Adding Slack Notifications
+--------------------------
+
+Slack info needs to be generated per-module and added to `.sync.yml`. The
+commands below will create (**and overwrite**) this file for you with the needed
+settings.
+
+```
+#!/bin/bash
+
+git checkout .
+
+echo '---' > .sync.yml
+echo '.travis.yml:' >> .sync.yml
+echo '  slack_rooms:' >> .sync.yml
+echo "    - '$(travis encrypt "<account>:<token>" --no-interactive | sed -e 's/"//g')' # first-room-name" >> .sync.yml
+echo "    - '$(travis encrypt "<account>:<token>" --no-interactive | sed -e 's/"//g')' # second-room-name" >> .sync.yml
+echo ''>> .sync.yml
+
+git add .sync.yml
+git commit -m 'updated slack config' .sync.yml
+git push origin feature/modulesyncbranch
+```
+
+Modify the above commands with your info. Also, if you have modified the branch
+modulesync will push to then you need to update the last line too.
 
 Configuring ModuleSync
 ----------------------
