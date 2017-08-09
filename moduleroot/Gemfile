@@ -10,8 +10,6 @@ group :development, :unit_tests do
     gem 'CFPropertyList',        '~> 2.3'
   end
 
-  gem 'json',                    '>= 2.0.2'
-  gem 'json_pure',               '>= 2.0.2'
   gem 'metadata-json-lint',      '~> 2.0'
   gem 'puppet',                  puppetversion
   gem 'puppetlabs_spec_helper',  '~> 2.2'
