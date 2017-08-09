@@ -8,7 +8,7 @@ I maintain.
 ## Command Quick Reference
 
 ```
-msync update -m "Commit message" [ --changelog ][ --amend --force ] [ --bump ]
+msync update -m "Commit message" [ --changelog ] [ --amend --force ]
 ```
 
 
