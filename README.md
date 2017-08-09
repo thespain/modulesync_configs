@@ -1,20 +1,18 @@
-ModuleSync Configs
-==================
+# ModuleSync Configs
 
 This repository contains default configuration for
 [modulesync](https://github.com/voxpupuli/modulesync) for the modules
 I maintain.
 
 
-Command Quick Reference
------------------------
+## Command Quick Reference
 
 ```
 msync update -m "Commit message" [ --changelog ][ --amend --force ] [ --bump ]
 ```
 
-Adding Slack Notifications
---------------------------
+
+## Adding Slack Notifications
 
 Slack info needs to be generated per-module and added to `.sync.yml`. The
 commands below will create (**and overwrite**) this file for you with the needed
@@ -40,8 +38,8 @@ git push origin feature/modulesyncbranch
 Modify the above commands with your info. Also, if you have modified the branch
 modulesync will push to then you need to update the last line too.
 
-Configuring ModuleSync
-----------------------
+
+## Configuring ModuleSync
 
 **`modulesync.yml`**
 
@@ -53,6 +51,7 @@ in this repository because it only serves to override default configuration.
 **`managed_modules.yml`**
 
 A YAML array containing the names of the modules to manage.
+
 
 Defining Module Files
 ---------------------
@@ -74,6 +73,7 @@ values to assign. A description of what optional values can be defined in
 .sync.yml follows in the description of each file in moduleroot/. .sync.yml
 will have the same format as config_defaults.yml.
 
+
 #### Note
 
 Each template is rendered in slightly different ways. Your templates to not
@@ -83,8 +83,8 @@ managing and appropriately handle the data structures you use in your templates
 (arrays versus hashes versus single values).
 
 
-Special Options
----------------
+## Special Options
+
 
 ### Unmanaged Files
 
@@ -101,6 +101,7 @@ spec/spec_helper.rb:
   unmanaged: true
 ```
 
+
 ### Deleted Files
 
 Managing files may mean removing files. You can ensure a file is absent by
@@ -114,6 +115,7 @@ example,
 spec/acceptance/nodesets/sles-11sp1-x64.yml
   delete: true
 ```
+
 
 # Adding a new module
 
